@@ -1,1 +1,0 @@
-Configuration option 'max text repl size (B)' changed from 65536 to 2147483647. Run the RECONFIGURE statement to install.
