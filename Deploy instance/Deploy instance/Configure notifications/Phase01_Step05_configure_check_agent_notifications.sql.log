@@ -1,0 +1,94 @@
+Job name                                                                                                                         Category name                                                                                                                    Catergory ID
+-------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------- ------------
+syspolicy_purge_history                                                                                                          [Uncategorized (Local)]                                                                                                                     0
+DBA - Database backup (DIFF)                                                                                                     Database Maintenance                                                                                                                        3
+DBA - Database backup (LOG)                                                                                                      Database Maintenance                                                                                                                        3
+DBA - Database integrity check                                                                                                   Database Maintenance                                                                                                                        3
+DBA - Database index maintenance                                                                                                 Database Maintenance                                                                                                                        3
+DBA - History and log file maintenance                                                                                           Database Maintenance                                                                                                                        3
+DBA - Database backup (FULL)                                                                                                     Database Maintenance                                                                                                                        3
+DBA - Audit                                                                                                                      System audit                                                                                                                              100
+DBA - checks (agent notifications test)                                                                                          System checks                                                                                                                             101
+DBA - Checks                                                                                                                     System checks                                                                                                                             101
+
+(10 rows affected)
+DBA email notification                                                                                                          
+--------------------------------------------------------------------------------------------------------------------------------
+
+(0 rows affected)
+DBA pager notification                                                                                                          
+--------------------------------------------------------------------------------------------------------------------------------
+
+(0 rows affected)
+CI_OPS email notification                                                                                                       
+--------------------------------------------------------------------------------------------------------------------------------
+DBA - Audit                                                                                                                     
+DBA - Checks                                                                                                                    
+DBA - checks (agent notifications test)                                                                                         
+DBA - Database backup (DIFF)                                                                                                    
+DBA - Database backup (FULL)                                                                                                    
+DBA - Database backup (LOG)                                                                                                     
+DBA - Database index maintenance                                                                                                
+DBA - Database integrity check                                                                                                  
+DBA - History and log file maintenance                                                                                          
+syspolicy_purge_history                                                                                                         
+
+(10 rows affected)
+CI_OPS pager notification                                                                                                       
+--------------------------------------------------------------------------------------------------------------------------------
+
+(0 rows affected)
+Email notifications not configured                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------
+
+(0 rows affected)
+Pager notifications not configured                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------
+DBA - Audit                                                                                                                     
+DBA - Checks                                                                                                                    
+DBA - checks (agent notifications test)                                                                                         
+DBA - Database backup (DIFF)                                                                                                    
+DBA - Database backup (FULL)                                                                                                    
+DBA - Database backup (LOG)                                                                                                     
+DBA - Database index maintenance                                                                                                
+DBA - Database integrity check                                                                                                  
+DBA - History and log file maintenance                                                                                          
+syspolicy_purge_history                                                                                                         
+
+(10 rows affected)
+JobName                                                                                                                          OwnerName                                                                                                                        Email operator                                                                                                                  
+-------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+DBA - Audit                                                                                                                      sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Checks                                                                                                                     sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - checks (agent notifications test)                                                                                          sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Database backup (DIFF)                                                                                                     sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Database backup (FULL)                                                                                                     sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Database backup (LOG)                                                                                                      sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Database index maintenance                                                                                                 sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - Database integrity check                                                                                                   sa                                                                                                                               CI_OPS                                                                                                                          
+DBA - History and log file maintenance                                                                                           sa                                                                                                                               CI_OPS                                                                                                                          
+syspolicy_purge_history                                                                                                          sa                                                                                                                               CI_OPS                                                                                                                          
+
+(10 rows affected)
+Alert name                                                                                                                       Operator name                                                                                                                   
+-------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+Database: Restore Success                                                                                                        DBA                                                                                                                             
+AG: Role Change                                                                                                                  DBA                                                                                                                             
+Severity 016                                                                                                                     DBA                                                                                                                             
+Severity 017                                                                                                                     DBA                                                                                                                             
+Severity 018                                                                                                                     DBA                                                                                                                             
+Severity 019                                                                                                                     DBA                                                                                                                             
+Severity 020                                                                                                                     DBA                                                                                                                             
+Severity 021                                                                                                                     DBA                                                                                                                             
+Severity 022                                                                                                                     DBA                                                                                                                             
+Severity 023                                                                                                                     DBA                                                                                                                             
+Severity 024                                                                                                                     DBA                                                                                                                             
+Severity 025                                                                                                                     DBA                                                                                                                             
+Error Number 823                                                                                                                 DBA                                                                                                                             
+Error Number 824                                                                                                                 DBA                                                                                                                             
+Error Number 825                                                                                                                 DBA                                                                                                                             
+NULL                                                                                                                             CI_Apps_Services                                                                                                                
+NULL                                                                                                                             CI_Data_and_Analytics                                                                                                           
+NULL                                                                                                                             CI_OPS                                                                                                                          
+
+(18 rows affected)

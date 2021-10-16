@@ -1,0 +1,26 @@
+-- *************************************** START - CONFIRM CHANGES ***********************************************************
+DECLARE @sqlmaintenanceplan_check varbinary(85)
+SET @sqlmaintenanceplan_check = SUSER_SID ('PA-HEALTH\sqlmaintenanceplan') -- equals PA-HEALTH\sqlmaintenanceplan domain user, permission via "PA-HEALTH\OPS SQL Admins" group membership.
+
+SELECT * FROM [msdb].[dbo].[sysjobs]
+	WHERE [owner_sid] = @sqlmaintenanceplan_check
+
+SELECT * from [msdb].[dbo].[sysssispackages] 
+	WHERE [ownersid] = @sqlmaintenanceplan_check
+
+SELECT * from [msdb].[dbo].[sysmaintplan_plans] 
+	WHERE [name] LIKE 'DBMP_%'
+
+-- This select should return nothing, when "PA-HEALTH\sqlmaintenanceplan" is the job owner, becuase it is a member of "OPS SQL admin" and not a server principal.
+SELECT j.[name], p.[name] AS [job_owner] FROM [msdb].[dbo].[sysjobs] j JOIN
+	[sys].[server_principals] p ON j.[owner_sid] = P.sid
+		WHERE j.[name] LIKE 'DBMP_%'
+
+-- *************************************** END - CONFIRM CHANGES *************************************************************
+
+
+
+ 
+
+
+

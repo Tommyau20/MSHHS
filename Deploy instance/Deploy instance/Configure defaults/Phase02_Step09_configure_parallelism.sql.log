@@ -1,0 +1,2 @@
+Configuration option 'cost threshold for parallelism' changed from 5 to 50. Run the RECONFIGURE statement to install.
+Configuration option 'max degree of parallelism' changed from 2 to 1. Run the RECONFIGURE statement to install.
