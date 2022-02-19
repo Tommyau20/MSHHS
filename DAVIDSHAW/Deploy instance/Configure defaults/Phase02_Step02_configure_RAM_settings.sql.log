@@ -1,0 +1,2 @@
+Configuration option 'max server memory (MB)' changed from 2147483647 to 4086. Run the RECONFIGURE statement to install.
+Configuration option 'min server memory (MB)' changed from 0 to 2043. Run the RECONFIGURE statement to install.

@@ -1,0 +1,4 @@
+Please do not change any of the content of this folder or its subfolders without first speaking to myself as the current custodian. The reason being, there are work instructions (e.g. SharePoint files) etc that reference these files and folders, plus all consideration needs to be made on how any changes, will affect any existing deployments etc.
+
+David Shaw
+20/01/2021

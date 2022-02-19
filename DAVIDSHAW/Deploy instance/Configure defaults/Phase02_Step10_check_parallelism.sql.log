@@ -1,0 +1,2 @@
+MAXDOP is set to 1, which supresses parallel plan generation.
+MAXDOP setting is in the recommended range. Reported values - NUMA: [1], Logical Processor: [2], MAXDOP: [1]

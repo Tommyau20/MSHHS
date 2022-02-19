@@ -1,0 +1,70 @@
+USE [DBA]
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	   ,[Value])
+     VALUES
+           ('Environment'
+	   ,'???????')
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	   ,[Value])
+     VALUES
+           ('SharedInstance'
+	   ,'???????')
+GO
+
+
+-- ********************************************************************************
+-- The below inserts do not need configuring. They will be populated as required.
+-- ********************************************************************************
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	   ,[Value])
+     VALUES
+           ('DBA Central last connection'
+	   ,NULL)
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	       ,[Value])
+     VALUES
+        ('MAXDOP at deployment'
+	    ,(SELECT cpu_count / hyperthread_ratio FROM sys.dm_os_sys_info))
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	       ,[Value])
+     VALUES
+        ('Cost threshold for parallelism at deployment'
+	    ,(SELECT ConVERT(VARCHAR(MAX), [value_in_use]) FROM sys.configurations WHERE [NAME] = 'cost threshold for parallelism'))
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	       ,[Value])
+     VALUES
+        ('Total physical memory (MB) at deployment'
+	    ,(SELECT [total_physical_memory_kb]/(1024^2) from sys.dm_os_sys_memory))
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	       ,[Value])
+     VALUES
+        ('Min. server memory (MB) at deployment'
+	    ,(SELECT ConVERT(VARCHAR(MAX), [value_in_use]) FROM sys.configurations WHERE [NAME] = 'min server memory (MB)'))
+GO
+
+INSERT INTO [dbo].[Parameters]
+           ([Parameter]
+  	       ,[Value])
+     VALUES
+        ('Max. server memory (MB) at deployment'
+	    ,(SELECT ConVERT(VARCHAR(MAX), [value_in_use]) FROM sys.configurations WHERE [NAME] = 'max server memory (MB)'))
+GO
