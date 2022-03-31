@@ -1,0 +1,18 @@
+#UAT Server name TWBPFM-AU01,21433
+#UAT Server name EMSDU01,21433
+Test-DbaBuild -SqlInstance 'EMSDU01,21433' -Update -MaxBehind 0CU | Select-Object SqlInstance, NameLevel, KBLevel, SPLevel, SPTarget, CULevel, CUTarget, BuildLevel, BuildTarget, Compliant | Format-Table -AutoSize;
+Get-DbaBuildReference -Build 14.0.3401 | Format-Table -AutoSize;
+$cu_version = "CU25"
+$Path_to_kb = "\\mshfileserv01.sth.health.qld.gov.au\ops_software$\Microsoft\SQL Server\SQL 2017\cu25"
+$cred  = Get-Credential PA-Health\SuvinVargheT
+#Get-DbaKbUpdate 5003830 |  Save-DbaKbUpdate  -Path $Path_to_kb
+
+#Update-DbaInstance -ComputerName 'EMSDU01,21433' -Credential $cred -Version $cu_version -Path $Path_to_kb -Restart 
+
+Test-DbaBuild -SqlInstance 'TWBPFM-AU01,21433' -Update -MaxBehind 0CU | Select-Object SqlInstance, NameLevel, KBLevel, SPLevel, SPTarget, CULevel, CUTarget, BuildLevel, BuildTarget, Compliant | Format-Table -AutoSize;
+Get-DbaBuildReference -Build 13.0.5888 | Format-Table -AutoSize;
+$cu_version = "sp2_cu17"
+$Path_to_kb = "\\mshfileserv01.sth.health.qld.gov.au\ops_software$\Microsoft\SQL Server\SQL 2016\sp2_cu17"
+$cred  = Get-Credential PA-Health\SuvinVargheT
+Get-DbaKbUpdate 5001092 |  Save-DbaKbUpdate  -Path $Path_to_kb
+ 
